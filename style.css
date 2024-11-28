@@ -1,0 +1,95 @@
+/* Reset your CSS */
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background-color: blueviolet;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	/* Centrando tu div sin flex, ni grid*/
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 500px;
+	height: 200px;
+	background-color: black;
+	border-radius: 10px;
+}
+	/* Tu reto es lograr crear la imagen que viene adjunta, sólo con CSS */
+	/* Tu código aquí */
+
+	body {
+		background: #9333ea;
+		margin: 0;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	  }
+	  
+	  .container {
+		width: 350px;
+		height: 150px;
+		background: black;
+		border-radius: 8px;
+		padding: 10px;
+	  }
+	  
+	  .container__divs {
+		display: flex;
+		gap: 2px;
+		position: relative;
+		height: 100%;
+	  }
+	  
+	  .container__divs--child {
+		background: white;
+		flex: 1;
+		border-radius: 0 0 4px 4px;
+	  }
+	  
+	  .container__divs--child div {
+		position: absolute;
+		width: 20px;
+		height: 90px;
+		background: black;
+		border-radius: 0 0 4px 4px;
+	  }
+	  
+	  /* Posicionamiento de teclas negras */
+	  .container__divs--child:nth-child(2) div { left: 12%; }
+	  .container__divs--child:nth-child(3) div { left: 22%; }
+	  .container__divs--child:nth-child(4) div { left: 42%; }
+	  .container__divs--child:nth-child(5) div { left: 52%; }
+	  .container__divs--child:nth-child(6) div { left: 62%; }
+	  .container__divs--child:nth-child(7) div { left: 82%; }
+	  .container__divs--child:nth-child(8) div { left: 92%; }
+	
