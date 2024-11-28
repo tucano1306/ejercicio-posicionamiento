@@ -47,49 +47,51 @@ img {
 	/* Tu código aquí */
 
 	body {
-		background: #9333ea;
 		margin: 0;
 		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		background: #9333ea;
+		display: grid;
+		place-items: center;
 	  }
 	  
 	  .container {
 		width: 350px;
-		height: 150px;
+		height: 180px;
 		background: black;
 		border-radius: 8px;
-		padding: 10px;
+		padding: 15px;
+		position: relative;
 	  }
 	  
 	  .container__divs {
-		display: flex;
-		gap: 2px;
-		position: relative;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		gap: 3px;
 		height: 100%;
 	  }
 	  
 	  .container__divs--child {
 		background: white;
-		flex: 1;
 		border-radius: 0 0 4px 4px;
+		position: relative;
 	  }
 	  
-	  .container__divs--child div {
+	  /* Black keys positioning */
+	  .container__divs--child:nth-child(2)::after,
+	  .container__divs--child:nth-child(3)::after,
+	  .container__divs--child:nth-child(5)::after,
+	  .container__divs--child:nth-child(6)::after,
+	  .container__divs--child:nth-child(7)::after {
+		content: '';
 		position: absolute;
 		width: 20px;
-		height: 90px;
+		height: 100px;
 		background: black;
+		left: 50%;
 		border-radius: 0 0 4px 4px;
+		z-index: 1;
 	  }
+	
+	
 	  
-	  /* Posicionamiento de teclas negras */
-	  .container__divs--child:nth-child(2) div { left: 12%; }
-	  .container__divs--child:nth-child(3) div { left: 22%; }
-	  .container__divs--child:nth-child(4) div { left: 42%; }
-	  .container__divs--child:nth-child(5) div { left: 52%; }
-	  .container__divs--child:nth-child(6) div { left: 62%; }
-	  .container__divs--child:nth-child(7) div { left: 82%; }
-	  .container__divs--child:nth-child(8) div { left: 92%; }
 	
